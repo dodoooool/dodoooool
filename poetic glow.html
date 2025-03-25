@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>  le titre il faut le titre mais je n'en veux pas sauf que le code marche pas sans for some reasons et je ne sais pas vraiment coder alors voici le titre</title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            white-space: pre;
+            margin: 2em;
+            overflow: hidden;
+            cursor: none;
+        }
+
+        /* Soft text glow */
+        body {
+            text-shadow: 
+                0 0 5px #fff,
+                0 0 10px rgba(255, 255, 255, 0.3),
+                0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Shiny cursor (sparkle trail) */
+        .cursor {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #fff 20%, transparent 70%);
+            pointer-events: none;
+            mix-blend-mode: screen;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+        }
+
+        .cursor-trail {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 70%);
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+poetic computation
+what is exactly the body in this language
+why is the computer so magical
+the light is keeping me awake
+tes lueurs me rendent divine puisque
+j'interagie avec la lumière
+la lumière est d'une couleur contraire à la couleur blanche
+puisque la couleur blanche reflète la lumière
+elle l'a repousse
+elle l'a met à distance et une aura est ainsi créée
+la lumière est de la couleur de Rayon
+le chat qui a élu domicile sur le balcon à Hochelaga
+
+<script>
+    // Shiny cursor magic
+    const cursor = document.createElement('div');
+    cursor.classList.add('cursor');
+    document.body.appendChild(cursor);
+
+    const trails = [];
+    for (let i = 0; i < 5; i++) {
+        const trail = document.createElement('div');
+        trail.classList.add('cursor-trail');
+        document.body.appendChild(trail);
+        trails.push(trail);
+    }
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+
+        // Trail effect with delay
+        trails.forEach((trail, index) => {
+            setTimeout(() => {
+                trail.style.left = e.clientX + 'px';
+                trail.style.top = e.clientY + 'px';
+                trail.style.opacity = '0.8';
+                setTimeout(() => { trail.style.opacity = '0'; }, 100);
+            }, index * 50);
+        });
+    });
+</script>
+<!-- Glitch link (bottom right) -->
+<a href="page2.html" class="glitch-link">enter the void</a>
+
+<style>
+    .glitch-link {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: cyan;
+        text-decoration: none;
+        font-family: 'Courier New', monospace;
+        animation: glitch 2s infinite;
+    }
+
+    @keyframes glitch {
+        0% { text-shadow: 1px 0 magenta; opacity: 0.8; }
+        20% { text-shadow: -1px 0 cyan; transform: skew(5deg); }
+        40% { text-shadow: 1px 0 yellow; opacity: 1; }
+        60% { text-shadow: 0 1px magenta; transform: skew(-3deg); }
+        80% { text-shadow: 0 -1px cyan; opacity: 0.6; }
+        100% { text-shadow: 1px 0 yellow; transform: skew(0); }
+    }
+</style>
+</body>
+</html>
