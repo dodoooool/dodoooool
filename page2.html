@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>la deuxième page de ce site</title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            white-space: pre;
+            margin: 2em;
+            overflow: hidden;
+            cursor: none;
+        }
+
+        /* Glitching text */
+        .glitch-text {
+            animation: glitch-text 1s infinite;
+            position: relative;
+        }
+
+        @keyframes glitch-text {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); opacity: 0.8; }
+            40% { transform: translate(2px, -1px); text-shadow: 2px 0 magenta; }
+            60% { transform: translate(0); opacity: 1; }
+            80% { transform: translate(3px, 1px); text-shadow: -2px 0 cyan; }
+            100% { transform: translate(0); }
+        }
+
+        /* Reuse your cursor styles from index.html */
+        .cursor, .cursor-trail { /* Copy-paste the cursor CSS from your first page */ }
+    </style>
+</head>
+<body>
+    <div class="glitch-text">
+        the void whispers back
+        in broken syllables
+        error 404: meaning not found
+        but the glitch is always there
+        never a mistake 
+        le glitch est la perfection incarnée 
+    à l'image d- Créat---- </em>
+    </div>
+
+    <!-- Reuse your cursor script from index.html -->
+    <script>
+        // Copy-paste the cursor JavaScript from your first page
+    </script>
+</body>
+</html>
